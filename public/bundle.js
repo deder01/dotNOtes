@@ -24113,15 +24113,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Main = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../components/Main\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Main = __webpack_require__(207);
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	var _Home = __webpack_require__(209);
+	var _Home = __webpack_require__(208);
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Profile = __webpack_require__(210);
+	var _Profile = __webpack_require__(209);
 
 	var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -24137,9 +24137,53 @@
 	);
 
 /***/ }),
-/* 207 */,
-/* 208 */,
-/* 209 */
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _SearchGithub = __webpack_require__(236);
+
+	var _SearchGithub2 = _interopRequireDefault(_SearchGithub);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Main = function Main(_ref) {
+	  var history = _ref.history,
+	      children = _ref.children;
+
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'main-container' },
+	    _react2.default.createElement(
+	      'nav',
+	      { className: 'navbar navbar-default', role: 'navigation' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-7 col-sm-offset-2', style: { marginTop: 15 } },
+	        _react2.default.createElement(_SearchGithub2.default, { history: history })
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'container' },
+	      undefined.props.children
+	    )
+	  );
+	};
+
+	exports.default = Main;
+
+/***/ }),
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24165,7 +24209,7 @@
 	exports.default = Home;
 
 /***/ }),
-/* 210 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24180,23 +24224,23 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Repos = __webpack_require__(211);
+	var _Repos = __webpack_require__(210);
 
 	var _Repos2 = _interopRequireDefault(_Repos);
 
-	var _UserProfile = __webpack_require__(212);
+	var _UserProfile = __webpack_require__(211);
 
 	var _UserProfile2 = _interopRequireDefault(_UserProfile);
 
-	var _Notes = __webpack_require__(213);
+	var _Notes = __webpack_require__(212);
 
 	var _Notes2 = _interopRequireDefault(_Notes);
 
-	var _helpers = __webpack_require__(216);
+	var _helpers = __webpack_require__(215);
 
 	var _helpers2 = _interopRequireDefault(_helpers);
 
-	var _reBase = __webpack_require__(234);
+	var _reBase = __webpack_require__(233);
 
 	var _reBase2 = _interopRequireDefault(_reBase);
 
@@ -24307,7 +24351,7 @@
 	exports.default = Profile;
 
 /***/ }),
-/* 211 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24368,7 +24412,7 @@
 	exports.default = Repos;
 
 /***/ }),
-/* 212 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24459,7 +24503,7 @@
 	exports.default = UserProfile;
 
 /***/ }),
-/* 213 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24472,11 +24516,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _NotesList = __webpack_require__(214);
+	var _NotesList = __webpack_require__(213);
 
 	var _NotesList2 = _interopRequireDefault(_NotesList);
 
-	var _AddNote = __webpack_require__(215);
+	var _AddNote = __webpack_require__(214);
 
 	var _AddNote2 = _interopRequireDefault(_AddNote);
 
@@ -24511,7 +24555,7 @@
 	exports.default = Notes;
 
 /***/ }),
-/* 214 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24543,7 +24587,7 @@
 	exports.default = NotesList;
 
 /***/ }),
-/* 215 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -24623,7 +24667,7 @@
 	exports.default = AddNote;
 
 /***/ }),
-/* 216 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24633,7 +24677,7 @@
 	});
 	exports.default = getGithubInfo;
 
-	var _axios = __webpack_require__(217);
+	var _axios = __webpack_require__(216);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
@@ -24654,24 +24698,24 @@
 	}
 
 /***/ }),
-/* 217 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(218);
+	module.exports = __webpack_require__(217);
 
 /***/ }),
-/* 218 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(219);
-	var utils = __webpack_require__(220);
-	var dispatchRequest = __webpack_require__(221);
-	var InterceptorManager = __webpack_require__(229);
-	var isAbsoluteURL = __webpack_require__(230);
-	var combineURLs = __webpack_require__(231);
-	var bind = __webpack_require__(232);
+	var defaults = __webpack_require__(218);
+	var utils = __webpack_require__(219);
+	var dispatchRequest = __webpack_require__(220);
+	var InterceptorManager = __webpack_require__(228);
+	var isAbsoluteURL = __webpack_require__(229);
+	var combineURLs = __webpack_require__(230);
+	var bind = __webpack_require__(231);
 
 	function Axios(defaultConfig) {
 	  this.defaultConfig = utils.merge({
@@ -24739,7 +24783,7 @@
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(233);
+	axios.spread = __webpack_require__(232);
 
 	// Expose interceptors
 	axios.interceptors = defaultInstance.interceptors;
@@ -24770,12 +24814,12 @@
 
 
 /***/ }),
-/* 219 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -24839,7 +24883,7 @@
 
 
 /***/ }),
-/* 220 */
+/* 219 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -25085,7 +25129,7 @@
 
 
 /***/ }),
-/* 221 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25102,10 +25146,10 @@
 	    try {
 	      if ((typeof XMLHttpRequest !== 'undefined') || (typeof ActiveXObject !== 'undefined')) {
 	        // For browsers use XHR adapter
-	        __webpack_require__(222)(resolve, reject, config);
+	        __webpack_require__(221)(resolve, reject, config);
 	      } else if (typeof process !== 'undefined') {
 	        // For node use HTTP adapter
-	        __webpack_require__(222)(resolve, reject, config);
+	        __webpack_require__(221)(resolve, reject, config);
 	      }
 	    } catch (e) {
 	      reject(e);
@@ -25117,20 +25161,20 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 222 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	/*global ActiveXObject:true*/
 
-	var defaults = __webpack_require__(219);
-	var utils = __webpack_require__(220);
-	var buildURL = __webpack_require__(223);
-	var parseHeaders = __webpack_require__(224);
-	var transformData = __webpack_require__(225);
-	var isURLSameOrigin = __webpack_require__(226);
-	var btoa = window.btoa || __webpack_require__(227);
+	var defaults = __webpack_require__(218);
+	var utils = __webpack_require__(219);
+	var buildURL = __webpack_require__(222);
+	var parseHeaders = __webpack_require__(223);
+	var transformData = __webpack_require__(224);
+	var isURLSameOrigin = __webpack_require__(225);
+	var btoa = window.btoa || __webpack_require__(226);
 
 	module.exports = function xhrAdapter(resolve, reject, config) {
 	  // Transform request data
@@ -25207,7 +25251,7 @@
 	  // This is only done if running in a standard browser environment.
 	  // Specifically not if we're in a web worker, or react-native.
 	  if (utils.isStandardBrowserEnv()) {
-	    var cookies = __webpack_require__(228);
+	    var cookies = __webpack_require__(227);
 
 	    // Add xsrf header
 	    var xsrfValue =  config.withCredentials || isURLSameOrigin(config.url) ?
@@ -25258,12 +25302,12 @@
 
 
 /***/ }),
-/* 223 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -25331,12 +25375,12 @@
 
 
 /***/ }),
-/* 224 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	/**
 	 * Parse headers into an object
@@ -25374,12 +25418,12 @@
 
 
 /***/ }),
-/* 225 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	/**
 	 * Transform the data for a request or a response
@@ -25400,12 +25444,12 @@
 
 
 /***/ }),
-/* 226 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -25474,7 +25518,7 @@
 
 
 /***/ }),
-/* 227 */
+/* 226 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -25516,12 +25560,12 @@
 
 
 /***/ }),
-/* 228 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -25575,12 +25619,12 @@
 
 
 /***/ }),
-/* 229 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(220);
+	var utils = __webpack_require__(219);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -25633,7 +25677,7 @@
 
 
 /***/ }),
-/* 230 */
+/* 229 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -25653,7 +25697,7 @@
 
 
 /***/ }),
-/* 231 */
+/* 230 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -25671,7 +25715,7 @@
 
 
 /***/ }),
-/* 232 */
+/* 231 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -25688,7 +25732,7 @@
 
 
 /***/ }),
-/* 233 */
+/* 232 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -25721,20 +25765,20 @@
 
 
 /***/ }),
-/* 234 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(235);
+	module.exports = __webpack_require__(234);
 
 
 
 /***/ }),
-/* 235 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
 		if(true)
-			module.exports = factory(__webpack_require__(236));
+			module.exports = factory(__webpack_require__(235));
 		else if(typeof define === 'function' && define.amd)
 			define(["firebase"], factory);
 		else {
@@ -26264,7 +26308,7 @@
 	;
 
 /***/ }),
-/* 236 */
+/* 235 */
 /***/ (function(module, exports) {
 
 	/*! @license Firebase v2.4.2
@@ -26548,6 +26592,100 @@
 
 	module.exports = Firebase;
 
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _reactRouter2 = _interopRequireDefault(_reactRouter);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SearchGithub = function (_React$Component) {
+	  _inherits(SearchGithub, _React$Component);
+
+	  function SearchGithub() {
+	    _classCallCheck(this, SearchGithub);
+
+	    return _possibleConstructorReturn(this, (SearchGithub.__proto__ || Object.getPrototypeOf(SearchGithub)).apply(this, arguments));
+	  }
+
+	  _createClass(SearchGithub, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'col-sm-12' },
+	        _react2.default.createElement(
+	          'form',
+	          { onSubmit: function onSubmit() {
+	              return _this2.handleSubmit();
+	            } },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group col-sm-7' },
+	            _react2.default.createElement('input', { type: 'text', className: 'form-control', ref: function ref(_ref) {
+	                return _this2.getRef(_ref);
+	              } })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group col-sm-5' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'submit', className: 'btn btn-block btn-primary' },
+	              'Search Github'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'getRef',
+	    value: function getRef(ref) {
+	      this.usernameRef = ref;
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit() {
+	      var username = this.usernameRef.value;
+	      this.usernameRef.value = '';
+	      this.props.history.pushState(null, "/profile/" + username);
+	    }
+	  }]);
+
+	  return SearchGithub;
+	}(_react2.default.Component);
+
+	;
+
+	SearchGithub.PropTypes = {
+	  history: _react2.default.PropTypes.object.isRequired
+	};
+
+	exports.default = SearchGithub;
 
 /***/ })
 /******/ ]);
