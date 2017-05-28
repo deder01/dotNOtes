@@ -1,30 +1,31 @@
-var React = require('react');
+import React from 'react';
 
-var AddNote = React.createClass({
-  propTypes: {
-    username: React.PropTypes.string.isRequired,
-    addNote: React.PropTypes.func.isRequired,
-  },
+class AddNote extends React.Component {
 
-  setRef: function(ref) {
+  setRef(ref) {
     this.note = ref;
-  },
+  }
 
-  handleSubmit: function() {
+  handleSubmit() {
     var newNote = this.note.value;
     this.props.addNote(newNote);
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="input-group">
-        <input type="text" className="form-control" placeholder="Add new note" ref={this.setRef}/>
+        <input type="text" className="form-control" placeholder="Add new note" ref={(ref) => this.setRef(ref)}/>
         <span className='input-group-btn'>
-          <button className="btn btn-default" type="button" onClick={this.handleSubmit}>Submit</button>
+          <button className="btn btn-default" type="button" onClick={() => this.handleSubmit()}>Submit</button>
         </span>
       </div>
     );
   }
-});
+}
 
-module.exports = AddNote;
+AddNote.propTypes = {
+  username: React.PropTypes.string.isRequired,
+  addNote: React.PropTypes.func.isRequired,
+};
+
+export default AddNote;
